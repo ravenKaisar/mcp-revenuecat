@@ -51,14 +51,3 @@ MCP_SERVER_TOKEN=dev REVENUECAT_ACCOUNTS_FILE=secrets/revenuecat_accounts.json p
 Or `MCP_SERVER_TOKEN=dev docker compose up --build`.
 
 Listens on fixed port 3000. Endpoints: `GET /healthz`, `POST /mcp` (stateless Streamable HTTP, JSON responses).
-
-## Publish
-
-`.github/workflows/docker-publish.yml` tests, then pushes multi-arch images to
-GHCR and Docker Hub on pushes to `main` (image tag `latest`) and on `vX.Y.Z` git
-tags (image tag `vX.Y.Z`, plus npm publish of version `X.Y.Z`). Needs
-`DOCKERHUB_USERNAME`, `DOCKERHUB_TOKEN` and `NPM_TOKEN` repo secrets.
-
-```sh
-git tag v1.0.0 && git push origin v1.0.0
-```
