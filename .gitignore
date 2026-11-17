@@ -1,0 +1,10 @@
+node_modules
+dist
+.pnpm-store
+.env
+coverage
+*.log
+revenuecat_accounts.json
+secrets/*
+!secrets/revenuecat_accounts.example.json
+/graft/

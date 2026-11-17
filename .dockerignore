@@ -1,0 +1,11 @@
+node_modules
+dist
+.pnpm-store
+.git
+.env
+coverage
+*.log
+revenuecat_accounts.json
+secrets
+README.md
+tests

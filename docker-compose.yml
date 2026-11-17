@@ -1,0 +1,11 @@
+services:
+  mcp-revenuecat:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      MCP_SERVER_TOKEN: "${MCP_SERVER_TOKEN:?set MCP_SERVER_TOKEN}"
+      REVENUECAT_UPSTREAM_MCP_URL: "https://mcp.revenuecat.ai/mcp"
+      REVENUECAT_ACCOUNTS_FILE: "/run/secrets/revenuecat_accounts.json"
+    volumes:
+      - ./secrets/revenuecat_accounts.json:/run/secrets/revenuecat_accounts.json:ro
